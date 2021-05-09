@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="adoptModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="adopt">
+          <Key>
+            <PropertyRef Name="id_adopt" />
+          </Key>
+          <Property Name="id_adopt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date_adopt" Type="int" Nullable="false" />
+          <Property Name="id_client" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="animal">
+          <Key>
+            <PropertyRef Name="id_animal" />
+          </Key>
+          <Property Name="id_animal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_animal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="quantite_animal" Type="int" Nullable="false" />
+          <Property Name="type_animal" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sexe_animal" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="image_animal" Type="image" Nullable="false" />
+          <Property Name="id_category" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="id_category" />
+          </Key>
+          <Property Name="id_category" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_category" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="id_client" />
+          </Key>
+          <Property Name="id_client" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_client" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="telephone_client" Type="int" Nullable="false" />
+          <Property Name="sexe_client" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="adresse_client" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="pays_client" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="email_client" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'adopt.dbo.detail_adopt' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="detail_adopt">
+          <Key>
+            <PropertyRef Name="id_adopt" />
+            <PropertyRef Name="id_animal" />
+            <PropertyRef Name="nbr_animaux" />
+          </Key>
+          <Property Name="id_adopt" Type="int" Nullable="false" />
+          <Property Name="id_animal" Type="int" Nullable="false" />
+          <Property Name="nbr_animaux" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="id_utilisateur" />
+          </Key>
+          <Property Name="id_utilisateur" Type="int" Nullable="false" />
+          <Property Name="nom_utilisateur" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="mot_de_passe" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_adopt_client">
+          <End Role="client" Type="Self.client" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="adopt" Type="Self.adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="id_client" />
+            </Principal>
+            <Dependent Role="adopt">
+              <PropertyRef Name="id_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_animal_category">
+          <End Role="category" Type="Self.category" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="animal" Type="Self.animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="id_category" />
+            </Principal>
+            <Dependent Role="animal">
+              <PropertyRef Name="id_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detail_adopt_adopt">
+          <End Role="adopt" Type="Self.adopt" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="detail_adopt" Type="Self.detail_adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="adopt">
+              <PropertyRef Name="id_adopt" />
+            </Principal>
+            <Dependent Role="detail_adopt">
+              <PropertyRef Name="id_adopt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detail_adopt_animal">
+          <End Role="animal" Type="Self.animal" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="detail_adopt" Type="Self.detail_adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="animal">
+              <PropertyRef Name="id_animal" />
+            </Principal>
+            <Dependent Role="detail_adopt">
+              <PropertyRef Name="id_animal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="adoptModelStoreContainer">
+          <EntitySet Name="adopt" EntityType="Self.adopt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="animal" EntityType="Self.animal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detail_adopt" EntityType="Self.detail_adopt" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [detail_adopt].[id_adopt] AS [id_adopt], 
+    [detail_adopt].[id_animal] AS [id_animal], 
+    [detail_adopt].[nbr_animaux] AS [nbr_animaux]
+    FROM [dbo].[detail_adopt] AS [detail_adopt]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_adopt_client" Association="Self.FK_adopt_client">
+            <End Role="client" EntitySet="client" />
+            <End Role="adopt" EntitySet="adopt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_animal_category" Association="Self.FK_animal_category">
+            <End Role="category" EntitySet="category" />
+            <End Role="animal" EntitySet="animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detail_adopt_adopt" Association="Self.FK_detail_adopt_adopt">
+            <End Role="adopt" EntitySet="adopt" />
+            <End Role="detail_adopt" EntitySet="detail_adopt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detail_adopt_animal" Association="Self.FK_detail_adopt_animal">
+            <End Role="animal" EntitySet="animal" />
+            <End Role="detail_adopt" EntitySet="detail_adopt" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="adoptModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dbadoptcontext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="adopts" EntityType="adoptModel.adopt" />
+          <EntitySet Name="animals" EntityType="adoptModel.animal" />
+          <EntitySet Name="categories" EntityType="adoptModel.category" />
+          <EntitySet Name="clients" EntityType="adoptModel.client" />
+          <EntitySet Name="utilisateurs" EntityType="adoptModel.utilisateur" />
+          <EntitySet Name="detail_adopt" EntityType="adoptModel.detail_adopt" />
+          <AssociationSet Name="FK_adopt_client" Association="adoptModel.FK_adopt_client">
+            <End Role="client" EntitySet="clients" />
+            <End Role="adopt" EntitySet="adopts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detail_adopt_adopt" Association="adoptModel.FK_detail_adopt_adopt">
+            <End Role="adopt" EntitySet="adopts" />
+            <End Role="detail_adopt" EntitySet="detail_adopt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_animal_category" Association="adoptModel.FK_animal_category">
+            <End Role="category" EntitySet="categories" />
+            <End Role="animal" EntitySet="animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detail_adopt_animal" Association="adoptModel.FK_detail_adopt_animal">
+            <End Role="animal" EntitySet="animals" />
+            <End Role="detail_adopt" EntitySet="detail_adopt" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="adopt">
+          <Key>
+            <PropertyRef Name="id_adopt" />
+          </Key>
+          <Property Name="id_adopt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date_adopt" Type="Int32" Nullable="false" />
+          <Property Name="id_client" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="client" Relationship="adoptModel.FK_adopt_client" FromRole="adopt" ToRole="client" />
+          <NavigationProperty Name="detail_adopt" Relationship="adoptModel.FK_detail_adopt_adopt" FromRole="adopt" ToRole="detail_adopt" />
+        </EntityType>
+        <EntityType Name="animal">
+          <Key>
+            <PropertyRef Name="id_animal" />
+          </Key>
+          <Property Name="id_animal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_animal" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="quantite_animal" Type="Int32" Nullable="false" />
+          <Property Name="type_animal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sexe_animal" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="image_animal" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="id_category" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="category" Relationship="adoptModel.FK_animal_category" FromRole="animal" ToRole="category" />
+          <NavigationProperty Name="detail_adopt" Relationship="adoptModel.FK_detail_adopt_animal" FromRole="animal" ToRole="detail_adopt" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="id_category" />
+          </Key>
+          <Property Name="id_category" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_category" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="animals" Relationship="adoptModel.FK_animal_category" FromRole="category" ToRole="animal" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="id_client" />
+          </Key>
+          <Property Name="id_client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="telephone_client" Type="Int32" Nullable="false" />
+          <Property Name="sexe_client" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="adresse_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pays_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="email_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="adopts" Relationship="adoptModel.FK_adopt_client" FromRole="client" ToRole="adopt" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="id_utilisateur" />
+          </Key>
+          <Property Name="id_utilisateur" Type="Int32" Nullable="false" />
+          <Property Name="nom_utilisateur" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="mot_de_passe" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="detail_adopt">
+          <Key>
+            <PropertyRef Name="id_adopt" />
+            <PropertyRef Name="id_animal" />
+            <PropertyRef Name="nbr_animaux" />
+          </Key>
+          <Property Name="id_adopt" Type="Int32" Nullable="false" />
+          <Property Name="id_animal" Type="Int32" Nullable="false" />
+          <Property Name="nbr_animaux" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="adopt" Relationship="adoptModel.FK_detail_adopt_adopt" FromRole="detail_adopt" ToRole="adopt" />
+          <NavigationProperty Name="animal" Relationship="adoptModel.FK_detail_adopt_animal" FromRole="detail_adopt" ToRole="animal" />
+        </EntityType>
+        <Association Name="FK_adopt_client">
+          <End Type="adoptModel.client" Role="client" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="adoptModel.adopt" Role="adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="id_client" />
+            </Principal>
+            <Dependent Role="adopt">
+              <PropertyRef Name="id_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detail_adopt_adopt">
+          <End Type="adoptModel.adopt" Role="adopt" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="adoptModel.detail_adopt" Role="detail_adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="adopt">
+              <PropertyRef Name="id_adopt" />
+            </Principal>
+            <Dependent Role="detail_adopt">
+              <PropertyRef Name="id_adopt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_animal_category">
+          <End Type="adoptModel.category" Role="category" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="adoptModel.animal" Role="animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="id_category" />
+            </Principal>
+            <Dependent Role="animal">
+              <PropertyRef Name="id_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detail_adopt_animal">
+          <End Type="adoptModel.animal" Role="animal" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="adoptModel.detail_adopt" Role="detail_adopt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="animal">
+              <PropertyRef Name="id_animal" />
+            </Principal>
+            <Dependent Role="detail_adopt">
+              <PropertyRef Name="id_animal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="adoptModelStoreContainer" CdmEntityContainer="dbadoptcontext">
+          <EntitySetMapping Name="adopts">
+            <EntityTypeMapping TypeName="adoptModel.adopt">
+              <MappingFragment StoreEntitySet="adopt">
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
+                <ScalarProperty Name="date_adopt" ColumnName="date_adopt" />
+                <ScalarProperty Name="id_adopt" ColumnName="id_adopt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="animals">
+            <EntityTypeMapping TypeName="adoptModel.animal">
+              <MappingFragment StoreEntitySet="animal">
+                <ScalarProperty Name="id_category" ColumnName="id_category" />
+                <ScalarProperty Name="image_animal" ColumnName="image_animal" />
+                <ScalarProperty Name="sexe_animal" ColumnName="sexe_animal" />
+                <ScalarProperty Name="type_animal" ColumnName="type_animal" />
+                <ScalarProperty Name="quantite_animal" ColumnName="quantite_animal" />
+                <ScalarProperty Name="nom_animal" ColumnName="nom_animal" />
+                <ScalarProperty Name="id_animal" ColumnName="id_animal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="adoptModel.category">
+              <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="name_category" ColumnName="name_category" />
+                <ScalarProperty Name="id_category" ColumnName="id_category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clients">
+            <EntityTypeMapping TypeName="adoptModel.client">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="email_client" ColumnName="email_client" />
+                <ScalarProperty Name="pays_client" ColumnName="pays_client" />
+                <ScalarProperty Name="adresse_client" ColumnName="adresse_client" />
+                <ScalarProperty Name="sexe_client" ColumnName="sexe_client" />
+                <ScalarProperty Name="telephone_client" ColumnName="telephone_client" />
+                <ScalarProperty Name="nom_client" ColumnName="nom_client" />
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateurs">
+            <EntityTypeMapping TypeName="adoptModel.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="mot_de_passe" ColumnName="mot_de_passe" />
+                <ScalarProperty Name="nom_utilisateur" ColumnName="nom_utilisateur" />
+                <ScalarProperty Name="id_utilisateur" ColumnName="id_utilisateur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detail_adopt">
+            <EntityTypeMapping TypeName="adoptModel.detail_adopt">
+              <MappingFragment StoreEntitySet="detail_adopt">
+                <ScalarProperty Name="nbr_animaux" ColumnName="nbr_animaux" />
+                <ScalarProperty Name="id_animal" ColumnName="id_animal" />
+                <ScalarProperty Name="id_adopt" ColumnName="id_adopt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
