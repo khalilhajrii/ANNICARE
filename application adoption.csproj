@@ -79,6 +79,8 @@
     <Compile Include="category.cs">
       <DependentUpon>adoptdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\Class_animal.cs" />
+    <Compile Include="Class\Class_category.cs" />
     <Compile Include="Class\Class_client.cs" />
     <Compile Include="Class\class_connexion.cs" />
     <Compile Include="client.cs">
@@ -92,6 +94,30 @@
     </Compile>
     <Compile Include="Forms\add_edit.Designer.cs">
       <DependentUpon>add_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_edit_animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_edit_animal.Designer.cs">
+      <DependentUpon>Add_edit_animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_edit_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_edit_category.Designer.cs">
+      <DependentUpon>Add_edit_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Animal_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Animal_list.Designer.cs">
+      <DependentUpon>Animal_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Category_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Category_list.Designer.cs">
+      <DependentUpon>Category_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\connexion.cs">
       <SubType>Form</SubType>
@@ -118,6 +144,18 @@
     </Compile>
     <EmbeddedResource Include="Forms\add_edit.resx">
       <DependentUpon>add_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_edit_animal.resx">
+      <DependentUpon>Add_edit_animal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_edit_category.resx">
+      <DependentUpon>Add_edit_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Animal_list.resx">
+      <DependentUpon>Animal_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category_list.resx">
+      <DependentUpon>Category_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\connexion.resx">
       <DependentUpon>connexion.cs</DependentUpon>
@@ -170,6 +208,16 @@
       <DependentUpon>adoptdb.edmx</DependentUpon>
       <LastGenOutput>adoptdb.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ANICARE %281%29.png" />
+    <None Include="Resources\ANICARE.png" />
+    <None Include="Resources\bigfoot.png" />
+    <None Include="Resources\BIENVENUE CHEZ ANICARE1.png" />
+    <None Include="Resources\form1.png" />
+    <None Include="Resources\Gérer les catégories.png" />
+    <None Include="Resources\bx+category+alt-1325051853283468208_32.png" />
+    <None Include="Resources\Sans titre.png" />
+    <None Include="Resources\merge+type+48px-131985219209907007_32.png" />
+    <None Include="Resources\ant+design+++outlined+icons+stock-1324441629900553096_32.png" />
     <None Include="Resources\directions+24px-131987942689909534_32.png" />
     <None Include="Resources\map+point+icon-1320073183505881976_32.png" />
     <None Include="Resources\email+letter+mail+icon-1320165660069903496_32.png" />

@@ -25,7 +25,6 @@ namespace application_adoption
         public int quantite_animal { get; set; }
         public string type_animal { get; set; }
         public string sexe_animal { get; set; }
-        public byte[] image_animal { get; set; }
         public int id_category { get; set; }
     
         public virtual category category { get; set; }

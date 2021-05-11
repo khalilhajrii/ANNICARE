@@ -93,9 +93,39 @@ namespace application_adoption.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ANICARE {
+            get {
+                object obj = ResourceManager.GetObject("ANICARE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ANICARE__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ANICARE (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap animal_wildlife_feline_1320568503309200273_48 {
             get {
                 object obj = ResourceManager.GetObject("animal+wildlife+feline-1320568503309200273_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ant_design___outlined_icons_stock_1324441629900553096_32 {
+            get {
+                object obj = ResourceManager.GetObject("ant+design+++outlined+icons+stock-1324441629900553096_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -157,6 +187,36 @@ namespace application_adoption.Properties {
         internal static System.Drawing.Bitmap BIENVENUE_CHEZ_ANICARE__2_ {
             get {
                 object obj = ResourceManager.GetObject("BIENVENUE CHEZ ANICARE (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BIENVENUE_CHEZ_ANICARE1 {
+            get {
+                object obj = ResourceManager.GetObject("BIENVENUE CHEZ ANICARE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bigfoot {
+            get {
+                object obj = ResourceManager.GetObject("bigfoot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bx_category_alt_1325051853283468208_32 {
+            get {
+                object obj = ResourceManager.GetObject("bx+category+alt-1325051853283468208_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -265,6 +325,26 @@ namespace application_adoption.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap form1 {
+            get {
+                object obj = ResourceManager.GetObject("form1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gérer_les_catégories {
+            get {
+                object obj = ResourceManager.GetObject("Gérer les catégories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help_inkcontober_united_icon_1320183881540886372_48 {
             get {
                 object obj = ResourceManager.GetObject("help+inkcontober+united+icon-1320183881540886372_48", resourceCulture);
@@ -298,6 +378,16 @@ namespace application_adoption.Properties {
         internal static System.Drawing.Bitmap Menu_32 {
             get {
                 object obj = ResourceManager.GetObject("Menu_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap merge_type_48px_131985219209907007_32 {
+            get {
+                object obj = ResourceManager.GetObject("merge+type+48px-131985219209907007_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -358,6 +448,16 @@ namespace application_adoption.Properties {
         internal static System.Drawing.Bitmap rating_131964753173121821_48 {
             get {
                 object obj = ResourceManager.GetObject("rating-131964753173121821_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre {
+            get {
+                object obj = ResourceManager.GetObject("Sans titre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

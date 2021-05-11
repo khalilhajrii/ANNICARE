@@ -42,7 +42,7 @@ namespace application_adoption.Forms
             btnuser.Enabled = true;
             btndisconnect.Enabled = true;
             //lors de deconntion le button apercu
-            btnconnect.Enabled = false;
+            btnconnect.Visible = false;
             showbar.Visible = false;
         }
 
@@ -57,6 +57,7 @@ namespace application_adoption.Forms
             if (!pnlshow.Controls.Contains(List_client.instance))
             {
                 pnlshow.Controls.Add(List_client.instance);
+                List_client.instance.Dock = DockStyle.Fill;
 
             }
             else
@@ -109,6 +110,37 @@ namespace application_adoption.Forms
         private void btndisconnect_Click(object sender, EventArgs e)
         {
             Desactiver();
+        }
+
+        private void btnanimal_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(Animal_list.Instance))
+            {
+                pnlshow.Controls.Add(Animal_list.Instance);
+                Animal_list.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                Animal_list.Instance.BringToFront();
+            }
+        }
+
+        private void pnlshow_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btncategory_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(Category_list.Instance))
+            {
+                pnlshow.Controls.Add(Category_list.Instance);
+                Category_list.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                Category_list.Instance.BringToFront();
+            }
         }
     }
 }

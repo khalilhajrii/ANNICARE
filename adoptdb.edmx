@@ -22,7 +22,6 @@
           <Property Name="quantite_animal" Type="int" Nullable="false" />
           <Property Name="type_animal" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="sexe_animal" Type="nvarchar" MaxLength="6" Nullable="false" />
-          <Property Name="image_animal" Type="image" Nullable="false" />
           <Property Name="id_category" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="category">
@@ -197,7 +196,6 @@ avertissement 6002: La table/vue 'adopt.dbo.detail_adopt' n'a pas de clé primai
           <Property Name="quantite_animal" Type="Int32" Nullable="false" />
           <Property Name="type_animal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="sexe_animal" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="image_animal" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <Property Name="id_category" Type="Int32" Nullable="false" />
           <NavigationProperty Name="category" Relationship="adoptModel.FK_animal_category" FromRole="animal" ToRole="category" />
           <NavigationProperty Name="detail_adopt" Relationship="adoptModel.FK_detail_adopt_animal" FromRole="animal" ToRole="detail_adopt" />
@@ -318,7 +316,6 @@ avertissement 6002: La table/vue 'adopt.dbo.detail_adopt' n'a pas de clé primai
             <EntityTypeMapping TypeName="adoptModel.animal">
               <MappingFragment StoreEntitySet="animal">
                 <ScalarProperty Name="id_category" ColumnName="id_category" />
-                <ScalarProperty Name="image_animal" ColumnName="image_animal" />
                 <ScalarProperty Name="sexe_animal" ColumnName="sexe_animal" />
                 <ScalarProperty Name="type_animal" ColumnName="type_animal" />
                 <ScalarProperty Name="quantite_animal" ColumnName="quantite_animal" />

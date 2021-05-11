@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bigfoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bigfoot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BIENVENUE CHEZ ANICARE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BIENVENUE CHEZ ANICARE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upload+icon+upload+line+icon+icon-1320073121636456908_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upload+icon+upload+line+icon+icon-1320073121636456908_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add+photo+plus+upload+icon-1320184041118793911_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add+photo+plus+upload+icon-1320184041118793911_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BIENVENUE CHEZ ANICARE (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BIENVENUE CHEZ ANICARE (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +148,9 @@
   <data name="cancel+delete+garbage+recycle+remove+icon-1320085878741725875_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel+delete+garbage+recycle+remove+icon-1320085878741725875_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="#D9D9D9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\#D9D9D9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,11 +172,17 @@
   <data name="avatar+circle+male+profile+user+icon-1320196710301016992_481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar+circle+male+profile+user+icon-1320196710301016992_481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avatar+circle+male+profile+user+icon-1320196710301016992_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\avatar+circle+male+profile+user+icon-1320196710301016992_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add+photo+plus+upload+icon-1320184041118793911_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add+photo+plus+upload+icon-1320184041118793911_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rating-131964753173121821_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rating-131964753173121821_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="directions+24px-131987942689909534_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\directions+24px-131987942689909534_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="form1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\form1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Subtract_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Subtract_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +193,8 @@
   <data name="Connected_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Connected_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="os+x+icon-1320167913307692405_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\os+x+icon-1320167913307692405_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ant+design+++outlined+icons+stock-1324441629900553096_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ant+design+++outlined+icons+stock-1324441629900553096_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon+disk+disk+icon+disk+line+icon+dvd+icon+icon-1320073118181264386_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon+disk+disk+icon+disk+line+icon+dvd+icon+icon-1320073118181264386_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +202,32 @@
   <data name="Sans titre (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sans titre (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sans titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="of+thrones+game+thrones+series+character+avatar+jon+snow-1320568555745862611_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\of+thrones+game+thrones+series+character+avatar+jon+snow-1320568555745862611_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="#D9D9D9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\#D9D9D9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bx+category+alt-1325051853283468208_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bx+category+alt-1325051853283468208_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gérer les catégories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gérer les catégories.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar+circle+male+profile+user+icon-1320196710301016992_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar+circle+male+profile+user+icon-1320196710301016992_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="os+x+icon-1320167913307692405_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\os+x+icon-1320167913307692405_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="map+point+icon-1320073183505881976_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map+point+icon-1320073183505881976_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ANICARE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ANICARE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sans titre (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="abstractform" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abstractform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +241,14 @@
   <data name="Menu_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BIENVENUE CHEZ ANICARE (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BIENVENUE CHEZ ANICARE (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BIENVENUE CHEZ ANICARE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BIENVENUE CHEZ ANICARE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="phone+outline+2-131964735288098578_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone+outline+2-131964735288098578_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BIENVENUE CHEZ ANICARE (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BIENVENUE CHEZ ANICARE (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sans titre (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sans titre (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +259,8 @@
   <data name="equality+gender+male+relationship+sexual+orientation+transgender+icon-1320183803797541484_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equality+gender+male+relationship+sexual+orientation+transgender+icon-1320183803797541484_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sans titre (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sans titre (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="merge+type+48px-131985219209907007_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\merge+type+48px-131985219209907007_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="costume_avatar_character_halloween-25-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\costume_avatar_character_halloween-25-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +268,7 @@
   <data name="Sans titre (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sans titre (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="directions+24px-131987942689909534_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\directions+24px-131987942689909534_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ANICARE (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ANICARE (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

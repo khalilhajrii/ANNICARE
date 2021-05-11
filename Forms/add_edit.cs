@@ -13,9 +13,12 @@ namespace application_adoption.Forms
 {
     public partial class add_edit : Form
     {
-        public add_edit()
+        private UserControl clientu;
+
+        public add_edit(UserControl clientcontrol)
         {
             InitializeComponent();
+            this.clientu = clientcontrol;
         }
         //verification des champs obligatoire
         string verifList()
@@ -189,25 +192,48 @@ namespace application_adoption.Forms
             }
         }
 
+        public int select_id;
         private void button2_Click(object sender, EventArgs e)
         {
             if (verifList() != null)
             {
                 MessageBox.Show(verifList());
             }
+
             else
+            if(titre.Text == "Ajouter client")
             {
+
+
+
                 Class.Class_client Cl = new Class.Class_client();
                 if (Cl.Ajouter(txtnomc.Text, int.Parse(txtphone.Text), txtsexe.Text, txtemail.Text, txtadress.Text, txtpays.Text) == true)
                 {
-                    MessageBox.Show("Client ajouter avec succés", "ajout", MessageBoxButtons.OK); ;
+                    MessageBox.Show("Client ajouter avec succés", "ajout", MessageBoxButtons.OK);
+                        //actualisation de datagridview
+                    (clientu as List_client).actualiser();
                 }
                 else
                 {
                     MessageBox.Show("Le client est deja existe", "ajout", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-               
+                
+
             }
+            else
+            {
+                Class.Class_client C1 = new Class.Class_client();
+                C1.Modifier(select_id, txtnomc.Text, int.Parse(txtphone.Text), txtsexe.Text, txtemail.Text, txtadress.Text, txtpays.Text);
+                MessageBox.Show("Client a été modifié", "modification", MessageBoxButtons.OK);
+                //actualisation de datagridview
+                (clientu as List_client).actualiser();
+
+            }
+        }
+
+        private void add_edit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

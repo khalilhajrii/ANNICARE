@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ec03f0686afb453a811edac84af5a8f9" Name="Diagram1">
         <EntityTypeShape EntityType="adoptModel.adopt" Width="1.5" PointX="3" PointY="1.25" />
-        <EntityTypeShape EntityType="adoptModel.animal" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="adoptModel.animal" Width="1.5" PointX="3" PointY="5" />
         <EntityTypeShape EntityType="adoptModel.category" Width="1.5" PointX="0.75" PointY="5.375" />
         <EntityTypeShape EntityType="adoptModel.client" Width="1.5" PointX="0.75" PointY="1" />
         <EntityTypeShape EntityType="adoptModel.utilisateur" Width="1.5" PointX="5.75" PointY="4.75" />

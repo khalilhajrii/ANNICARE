@@ -32,11 +32,13 @@ namespace application_adoption.Forms
             this.formmenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.showbar = new System.Windows.Forms.Panel();
+            this.pnlshow = new System.Windows.Forms.Panel();
             this.btndisconnect = new System.Windows.Forms.Button();
             this.btnconnect = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnuser = new System.Windows.Forms.Button();
             this.btnadopt = new System.Windows.Forms.Button();
@@ -45,10 +47,11 @@ namespace application_adoption.Forms
             this.btnclient = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pnlshow = new System.Windows.Forms.Panel();
             this.formmenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.showbar.SuspendLayout();
+            this.pnlshow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +96,18 @@ namespace application_adoption.Forms
             this.showbar.Name = "showbar";
             this.showbar.Size = new System.Drawing.Size(284, 147);
             this.showbar.TabIndex = 6;
+            // 
+            // pnlshow
+            // 
+            this.pnlshow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlshow.Controls.Add(this.pictureBox3);
+            this.pnlshow.Location = new System.Drawing.Point(0, 75);
+            this.pnlshow.Name = "pnlshow";
+            this.pnlshow.Size = new System.Drawing.Size(576, 499);
+            this.pnlshow.TabIndex = 7;
+            this.pnlshow.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlshow_Paint);
             // 
             // btndisconnect
             // 
@@ -164,6 +179,19 @@ namespace application_adoption.Forms
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::application_adoption.Properties.Resources.ANICARE__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(-91, 92);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(785, 359);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -221,6 +249,7 @@ namespace application_adoption.Forms
             this.btnanimal.TabIndex = 9;
             this.btnanimal.Text = "Animal";
             this.btnanimal.UseVisualStyleBackColor = true;
+            this.btnanimal.Click += new System.EventHandler(this.btnanimal_Click);
             // 
             // btncategory
             // 
@@ -236,6 +265,7 @@ namespace application_adoption.Forms
             this.btncategory.TabIndex = 6;
             this.btncategory.Text = "Categorie";
             this.btncategory.UseVisualStyleBackColor = true;
+            this.btncategory.Click += new System.EventHandler(this.btncategory_Click);
             // 
             // btnclient
             // 
@@ -271,16 +301,6 @@ namespace application_adoption.Forms
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // pnlshow
-            // 
-            this.pnlshow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlshow.Location = new System.Drawing.Point(0, 75);
-            this.pnlshow.Name = "pnlshow";
-            this.pnlshow.Size = new System.Drawing.Size(576, 499);
-            this.pnlshow.TabIndex = 7;
-            // 
             // form_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +317,8 @@ namespace application_adoption.Forms
             this.formmenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.showbar.ResumeLayout(false);
+            this.pnlshow.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -322,5 +344,6 @@ namespace application_adoption.Forms
         private System.Windows.Forms.Button btnconnect;
         private System.Windows.Forms.Button btndisconnect;
         private System.Windows.Forms.Panel pnlshow;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
