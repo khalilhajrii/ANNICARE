@@ -33,5 +33,33 @@ namespace application_adoption.Class
                 return false;
             }
         }
+        //Modifier categorie
+        public void Modifier(int ID, string Nom)
+        {
+            Cat = new category();
+            Cat = db.categories.SingleOrDefault(s => s.id_category == ID);
+            //si la categorie existe dans la base de données
+            if (Cat != null)
+            {
+                //initialisation des nouveaux champs
+                Cat.name_category = Nom;
+                //enregistrement dans la base de données
+                db.SaveChanges();
+            }
+        }
+        //Supprimer categorie
+        public void Supprimer(int ID)
+        {
+            Cat = new category();
+            Cat = db.categories.SingleOrDefault(s => s.id_category == ID);
+            //si le client est existe
+            if (Cat != null)
+            {
+                //Supprimer le client
+                db.categories.Remove(Cat);
+                //enregistrement sur la base de données
+                db.SaveChanges();
+            }
+        }
     }
 }

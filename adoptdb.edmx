@@ -59,7 +59,7 @@ avertissement 6002: La table/vue 'adopt.dbo.detail_adopt' n'a pas de clé primai
           <Key>
             <PropertyRef Name="id_utilisateur" />
           </Key>
-          <Property Name="id_utilisateur" Type="int" Nullable="false" />
+          <Property Name="id_utilisateur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom_utilisateur" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="mot_de_passe" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -225,7 +225,7 @@ avertissement 6002: La table/vue 'adopt.dbo.detail_adopt' n'a pas de clé primai
           <Key>
             <PropertyRef Name="id_utilisateur" />
           </Key>
-          <Property Name="id_utilisateur" Type="Int32" Nullable="false" />
+          <Property Name="id_utilisateur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nom_utilisateur" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="mot_de_passe" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>

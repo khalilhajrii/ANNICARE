@@ -83,6 +83,7 @@
     <Compile Include="Class\Class_category.cs" />
     <Compile Include="Class\Class_client.cs" />
     <Compile Include="Class\class_connexion.cs" />
+    <Compile Include="Class\Class_user.cs" />
     <Compile Include="client.cs">
       <DependentUpon>adoptdb.tt</DependentUpon>
     </Compile>
@@ -107,6 +108,12 @@
     <Compile Include="Forms\Add_edit_category.Designer.cs">
       <DependentUpon>Add_edit_category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Add_edit_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_edit_user.Designer.cs">
+      <DependentUpon>Add_edit_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Animal_list.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +125,12 @@
     </Compile>
     <Compile Include="Forms\Category_list.Designer.cs">
       <DependentUpon>Category_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\client_adopt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\client_adopt.Designer.cs">
+      <DependentUpon>client_adopt.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\connexion.cs">
       <SubType>Form</SubType>
@@ -131,11 +144,29 @@
     <Compile Include="Forms\form_menu.Designer.cs">
       <DependentUpon>form_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_detail_adop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_detail_adop.Designer.cs">
+      <DependentUpon>Frm_detail_adop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\List_client.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\List_client.Designer.cs">
       <DependentUpon>List_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\List_adopt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\List_adopt.Designer.cs">
+      <DependentUpon>List_adopt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\List_users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\List_users.Designer.cs">
+      <DependentUpon>List_users.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,11 +182,17 @@
     <EmbeddedResource Include="Forms\Add_edit_category.resx">
       <DependentUpon>Add_edit_category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_edit_user.resx">
+      <DependentUpon>Add_edit_user.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Animal_list.resx">
       <DependentUpon>Animal_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Category_list.resx">
       <DependentUpon>Category_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\client_adopt.resx">
+      <DependentUpon>client_adopt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\connexion.resx">
       <DependentUpon>connexion.cs</DependentUpon>
@@ -163,8 +200,17 @@
     <EmbeddedResource Include="Forms\form_menu.resx">
       <DependentUpon>form_menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_detail_adop.resx">
+      <DependentUpon>Frm_detail_adop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\List_client.resx">
       <DependentUpon>List_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\List_adopt.resx">
+      <DependentUpon>List_adopt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\List_users.resx">
+      <DependentUpon>List_users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -208,6 +254,14 @@
       <DependentUpon>adoptdb.edmx</DependentUpon>
       <LastGenOutput>adoptdb.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bigfoot1.png" />
+    <None Include="Resources\Gérer les catégories %283%29.png" />
+    <None Include="Resources\add+photo+plus+upload+icon-1320184041118793911_481.png" />
+    <None Include="Resources\Download.png" />
+    <None Include="Resources\Ajouter adoption.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\Gérer les catégories %282%29.png" />
+    <None Include="Resources\Gérer les catégories %281%29.png" />
     <None Include="Resources\ANICARE %281%29.png" />
     <None Include="Resources\ANICARE.png" />
     <None Include="Resources\bigfoot.png" />

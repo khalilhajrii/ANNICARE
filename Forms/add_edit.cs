@@ -210,8 +210,10 @@ namespace application_adoption.Forms
                 if (Cl.Ajouter(txtnomc.Text, int.Parse(txtphone.Text), txtsexe.Text, txtemail.Text, txtadress.Text, txtpays.Text) == true)
                 {
                     MessageBox.Show("Client ajouter avec succés", "ajout", MessageBoxButtons.OK);
-                        //actualisation de datagridview
+                    //actualisation de datagridview
+                    Close();
                     (clientu as List_client).actualiser();
+                    
                 }
                 else
                 {
@@ -226,6 +228,7 @@ namespace application_adoption.Forms
                 C1.Modifier(select_id, txtnomc.Text, int.Parse(txtphone.Text), txtsexe.Text, txtemail.Text, txtadress.Text, txtpays.Text);
                 MessageBox.Show("Client a été modifié", "modification", MessageBoxButtons.OK);
                 //actualisation de datagridview
+                Close();
                 (clientu as List_client).actualiser();
 
             }

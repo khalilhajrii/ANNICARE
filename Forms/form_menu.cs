@@ -142,5 +142,32 @@ namespace application_adoption.Forms
                 Category_list.Instance.BringToFront();
             }
         }
+
+        private void btnadopt_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(List_adopt.Instance))
+            {
+                pnlshow.Controls.Add(List_adopt.Instance);
+                List_adopt.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                List_adopt.Instance.BringToFront();
+            }
+        }
+
+        private void btnuser_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(List_users.instance))
+            {
+                pnlshow.Controls.Add(List_users.instance);
+                List_users.instance.Dock = DockStyle.Fill;
+
+            }
+            else
+            {
+                List_users.instance.BringToFront();
+            }
+        }
     }
 }

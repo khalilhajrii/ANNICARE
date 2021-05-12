@@ -154,7 +154,9 @@ namespace application_adoption.Forms
                         {
                             MessageBox.Show("Animal ajouter avec succés", "ajout", MessageBoxButtons.OK);
                             //actualisation de datagrid
+                            Close();
                             (useranimal as Animal_list).actualiser();
+                            
                         }
                         else
                         {
@@ -169,8 +171,9 @@ namespace application_adoption.Forms
                         A1.Modifier(ID_animal, txtnoma.Text, int.Parse(txtquantité.Text), txttype.Text, txtsexea.Text, Convert.ToInt32(combocategoriey.SelectedValue));
                         MessageBox.Show("Animal modifée", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         //actualisation de data grid
-                        (useranimal as Animal_list).actualiser();
                         Close();
+                        (useranimal as Animal_list).actualiser();
+                        
                     }
                 }
             }

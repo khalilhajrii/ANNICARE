@@ -12,9 +12,11 @@ namespace application_adoption.Forms
 {
     public partial class Add_edit_category : Form
     {
-        public Add_edit_category()
+        private UserControl categoryu;
+        public Add_edit_category(UserControl cat)
         {
             InitializeComponent();
+            this.categoryu = cat;
         }
 
         string verif()
@@ -51,7 +53,7 @@ namespace application_adoption.Forms
                 txtnomc.Text = "Nom categorie";
             }
         }
-
+        public int ID_selected;
         private void button2_Click(object sender, EventArgs e)
         {
             if(verif() != null)
@@ -67,13 +69,24 @@ namespace application_adoption.Forms
                 {
                     MessageBox.Show("Categorie ajouter avec succés", "ajout", MessageBoxButtons.OK);
                     Close();
+                    (categoryu as Category_list).actualiser();
                 }
                 else
                 {
                     MessageBox.Show("Categorie est deja existe", "ajout", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-                
+            else
+            {
+                Class.Class_category C2 = new Class.Class_category();
+                C2.Modifier(ID_selected, txtnomc.Text);
+                MessageBox.Show("Client a été modifié", "modification", MessageBoxButtons.OK);
+                //actualisation de datagridview
+                Close();
+                (categoryu as Category_list).actualiser();
+
+            }
+
         }
     }
 }

@@ -93,6 +93,26 @@ namespace application_adoption.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_photo_plus_upload_icon_1320184041118793911_481 {
+            get {
+                object obj = ResourceManager.GetObject("add+photo+plus+upload+icon-1320184041118793911_481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ajouter_adoption {
+            get {
+                object obj = ResourceManager.GetObject("Ajouter adoption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ANICARE {
             get {
                 object obj = ResourceManager.GetObject("ANICARE", resourceCulture);
@@ -214,6 +234,16 @@ namespace application_adoption.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bigfoot1 {
+            get {
+                object obj = ResourceManager.GetObject("bigfoot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bx_category_alt_1325051853283468208_32 {
             get {
                 object obj = ResourceManager.GetObject("bx+category+alt-1325051853283468208_32", resourceCulture);
@@ -294,6 +324,16 @@ namespace application_adoption.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Download {
+            get {
+                object obj = ResourceManager.GetObject("Download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email_letter_mail_icon_1320165660069903496_32 {
             get {
                 object obj = ResourceManager.GetObject("email+letter+mail+icon-1320165660069903496_32", resourceCulture);
@@ -338,6 +378,36 @@ namespace application_adoption.Properties {
         internal static System.Drawing.Bitmap Gérer_les_catégories {
             get {
                 object obj = ResourceManager.GetObject("Gérer les catégories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gérer_les_catégories__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Gérer les catégories (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gérer_les_catégories__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Gérer les catégories (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gérer_les_catégories__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Gérer les catégories (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -518,6 +588,16 @@ namespace application_adoption.Properties {
         internal static System.Drawing.Bitmap Sans_titre__4_ {
             get {
                 object obj = ResourceManager.GetObject("Sans titre (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
